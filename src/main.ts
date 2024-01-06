@@ -9,6 +9,8 @@ const GENERATION_DELAY_MS = 200;
 const LIVE_COLOR = 'green';
 const DEAD_COLOR = 'gray';
 
+const restartButton = document.getElementById('restart-btn')!;
+restartButton.onclick = () => renderAnimation(grid);
 const canvas: HTMLCanvasElement = document.querySelector('canvas')!;
 const canvasContext = canvas.getContext('2d')!;
 
@@ -35,4 +37,4 @@ const renderAnimation = async (grid: Grid) => {
   requestAnimationFrame(() => renderAnimation(nextGrid));
 };
 
-renderAnimation(grid);
+  renderAnimation(grid);
